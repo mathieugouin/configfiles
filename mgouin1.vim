@@ -60,21 +60,16 @@ exe 'hi SignColumn guifg='s:comment' guibg='s:bg2
 exe 'hi LineNr guifg='s:fg4' guibg='s:bg2
 exe 'hi CursorLineNr guifg='s:fg' guibg='s:bg
 exe 'hi VertSplit guifg='s:fg4' guibg='s:bg4
-"exe 'hi MatchParen guifg='s:warning' guibg='s:warning2'  gui=underline'
 hi MatchParen	  term=reverse  ctermfg=blue guibg=Blue
-
 exe 'hi StatusLine   guifg='s:fg2' guibg='s:bg4' gui=bold'
 exe 'hi StatusLineNC guibg='s:fg4' guifg='s:bg2
-
-"hi StatusLine	    gui=bold guifg=blue guibg=white
-"hi StatusLineNC   	guifg=white guibg=blue
-
 exe 'hi Pmenu guifg='s:fg' guibg='s:bg2
 exe 'hi PmenuSel  guibg='s:bg3
 exe 'hi IncSearch guifg='s:bg' guibg='s:keyword
 exe 'hi Search   gui=underline'
 exe 'hi Directory guifg='s:const
 exe 'hi WildMenu guifg='s:str' guibg='s:bg
+exe 'hi Visual guibg='s:bg4
 
 exe 'hi Boolean guifg='s:const
 exe 'hi Character guifg='s:const
@@ -108,24 +103,6 @@ exe 'hi Title guifg='s:fg'  gui=bold'
 exe 'hi Todo guifg='s:fg2'  gui=inverse,bold'
 exe 'hi Type guifg='s:type
 exe 'hi Underlined   gui=underline'
-
-" Neovim Terminal Mode
-"let g:terminal_color_0 = s:bg
-"let g:terminal_color_1 = s:warning
-"let g:terminal_color_2 = s:keyword
-"let g:terminal_color_3 = s:bg4
-"let g:terminal_color_4 = s:func
-"let g:terminal_color_5 = s:builtin
-"let g:terminal_color_6 = s:fg3
-"let g:terminal_color_7 = s:str
-"let g:terminal_color_8 = s:bg2
-"let g:terminal_color_9 = s:warning2
-"let g:terminal_color_10 = s:fg2
-"let g:terminal_color_11 = s:var
-"let g:terminal_color_12 = s:type
-"let g:terminal_color_13 = s:const
-"let g:terminal_color_14 = s:fg4
-"let g:terminal_color_15 = s:comment
 
 " Ruby Highlighting
 "exe 'hi rubyAttribute guifg='s:builtin
