@@ -1,3 +1,5 @@
+# Custom bash aliases
+
 alias l='ls -l'
 alias la='ls -A'
 alias ll='ls -Al'
