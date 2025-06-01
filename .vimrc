@@ -84,12 +84,6 @@ set backupext=.bak "backup extension
 " Home folder
 set backupdir=~/tmp/vim/ "where to put backup files
 set directory=~/tmp/vim/ "where to put TMP files
-" Windows Home
-"set backupdir=E:\TEMP\vim\
-"set directory=E:\TEMP\vim\
-" CMC folder (Win7)
-"set backupdir=C:\Temp\vim "where to put backup files
-"set directory=C:\Temp\vim "where to put TMP files
 
 set viminfo='1000,f1,\"500,:1000,@1000,/1000
 set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,options,tabpages,winpos,winsize
@@ -233,34 +227,34 @@ let g:netrw_sort_sequence='[\/]$,*'
 set diffopt=filler,vertical,context:1000000,foldcolumn:1,iwhite
 
 "set diffexpr=MyDiff()
-function MyDiff()
-  let opt = '-a --binary '
-  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-  let arg1 = v:fname_in
-  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-  let arg2 = v:fname_new
-  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-  let arg3 = v:fname_out
-  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-  if $VIMRUNTIME =~ ' '
-    if &sh =~ '\<cmd'
-      if empty(&shellxquote)
-        let l:shxq_sav = ''
-        set shellxquote&
-      endif
-      let cmd = '"' . $VIMRUNTIME . '\diff"'
-    else
-      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-    endif
-  else
-    let cmd = $VIMRUNTIME . '\diff'
-  endif
-  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
-  if exists('l:shxq_sav')
-    let &shellxquote=l:shxq_sav
-  endif
-endfunction
+"function MyDiff()
+"  let opt = '-a --binary '
+"  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+"  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+"  let arg1 = v:fname_in
+"  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+"  let arg2 = v:fname_new
+"  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+"  let arg3 = v:fname_out
+"  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+"  if $VIMRUNTIME =~ ' '
+"    if &sh =~ '\<cmd'
+"      if empty(&shellxquote)
+"        let l:shxq_sav = ''
+"        set shellxquote&
+"      endif
+"      let cmd = '"' . $VIMRUNTIME . '\diff"'
+"    else
+"      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+"    endif
+"  else
+"    let cmd = $VIMRUNTIME . '\diff'
+"  endif
+"  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
+"  if exists('l:shxq_sav')
+"    let &shellxquote=l:shxq_sav
+"  endif
+"endfunction
 
 "TBD this does not work, but the augroup section does...
 "syn keyword myTodo contained    TBD WTF XXX
