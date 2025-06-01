@@ -1,5 +1,6 @@
 # Custom bash aliases
 
+alias ls='ls --color=auto --group-directories-first -F -v'
 alias l='ls -l'
 alias la='ls -A'
 alias ll='ls -Al'
