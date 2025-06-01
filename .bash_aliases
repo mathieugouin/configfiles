@@ -13,9 +13,8 @@ gvim_func ()
 
 alias gv=gvim_func
 
-#!/usr/bin/env bash
 # cd with history ===========================================================
-# acd_func 1.0.5, 10-nov-2004
+# cd_func 1.0.5, 10-nov-2004
 # petar marinov, http:/geocities.com/h2428, this is public domain
 # http://linuxgazette.net/109/misc/marinov/acd_func.html
 
@@ -77,4 +76,3 @@ if [[ $BASH_VERSION > "2.05a" ]]; then
   # ctrl+w shows the menu
   bind -x "\"\C-w\":cd_func -- ;"
 fi
-
